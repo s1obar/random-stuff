@@ -7,12 +7,12 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping
-public class DemoController {
+@RequestMapping("/api/v1/")
+public class CustomersController {
 
     private final List<String> CUSTOMERS = Arrays.asList("Jane", "Jack", "Donald");
 
-    @GetMapping("/")
+    @GetMapping("/all-customers")
     @ResponseStatus(HttpStatus.OK)
     public List<String> getAllCustomers(){
         return CUSTOMERS;
