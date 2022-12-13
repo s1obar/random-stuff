@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/customers")
+@RequestMapping(path = "/api/v1/customers", produces="application/json")
 public class CustomersController {
 
     private final List<String> CUSTOMERS = Arrays.asList("Jane", "Jack", "Donald");
