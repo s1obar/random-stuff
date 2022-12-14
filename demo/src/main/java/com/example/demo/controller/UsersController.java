@@ -45,7 +45,7 @@ public class UsersController {
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    //TODO: this is just for the commit try to see if the contributions are going to be visible
+    //TODO: this is just for the commit try to see if the contributions work
     public ResponseEntity<String> getUserByName(@PathVariable String name) {
         try {
            return new ResponseEntity<>(userService.getUserByName(name), HttpStatus.OK);
