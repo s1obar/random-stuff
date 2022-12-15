@@ -21,8 +21,6 @@ public class UsersController {
 
     private final UserService userService;
 
-    private final List<String> USERS = Arrays.asList("Aurora", "Antonija", "Manuela");
-
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Fetches all users from db.",
@@ -31,7 +29,7 @@ public class UsersController {
             @ApiResponse(code = 200, message = "Success"),
     })
     public List<String> getAllUsers(){
-        return USERS;
+        return userService.getAll();
     }
 
     @GetMapping(value = "/user/{name}")
@@ -43,7 +41,7 @@ public class UsersController {
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    public String getUserByName(@PathVariable String name) throws ApiRequestException{
+    public String getUserByName(@PathVariable String name){
            return userService.getUserByName(name);
     }
 }
