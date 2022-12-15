@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>Random Stuff</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Api Example</name>
-	<description>Simple CRUD api</description>
+	<name>Random Stuff</name>
+	<description>Random Stuff</description>
 	<properties>
 		<java.version>17</java.version>
 		<!-- Swagger -->
