@@ -1,8 +1,11 @@
 package com.example.demo.controller;
 
+import com.example.demo.controller.exception.ApiRequestException;
+import com.example.demo.domain.service.CustomerService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +15,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/v1/customers")
+@RequiredArgsConstructor
 public class CustomersController {
 
-    private final List<String> CUSTOMERS = Arrays.asList("Jane", "Jack", "Donald");
+    private final CustomerService customerService;
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
@@ -24,7 +28,7 @@ public class CustomersController {
             @ApiResponse(code = 200, message = "Success"),
     })
     public List<String> getAllCustomers(){
-        return CUSTOMERS;
+        return customerService.getAll();
     }
 
     @GetMapping(value = "/customer/{name}")
@@ -35,10 +39,7 @@ public class CustomersController {
             @ApiResponse(code = 200, message = "Success"),
             @ApiResponse(code = 404, message = "Not found")
     })
-    public ResponseEntity<String> getCustomerByName(@PathVariable String name){
-        if(CUSTOMERS.stream().map(String::toLowerCase).toList().contains(name.toLowerCase())){
-            return new ResponseEntity<>(name, HttpStatus.OK);
-        }
-        return new ResponseEntity<>("We do not have that customer in our database!", HttpStatus.NOT_FOUND);
+    public String getCustomerByName(@PathVariable String name) {
+        return customerService.getCustomerByName(name);
     }
 }
