@@ -1,12 +1,7 @@
-# RANDOM STUFF
+# DEMO
 
-## Description
+## What is done in this project
 
-This project represents a lot of small api services that are going to 'speak' about things I investigated and learned about.
-
-## Technology
-
-* Backend: Java
-* Framework: Spring
-* Database: tbd
-* Frontend: tbd
+* simple controllers
+* different exception handling techniques
+* testing api responses with MockMvc
