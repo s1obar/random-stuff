@@ -1,8 +1,4 @@
 target/
-.mvn
-mvnw
-mvnw.cmd
-.idea
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -16,7 +12,7 @@ mvnw.cmd
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -33,3 +29,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### MAVEN ###
+mvnw
+mvnw.cmd
+.mvn/
