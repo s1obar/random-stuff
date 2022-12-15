@@ -1,5 +1,8 @@
 target/
-!.mvn/wrapper/maven-wrapper.jar
+.mvn
+mvnw
+mvnw.cmd
+.idea
 !**/src/main/**/target/
 !**/src/test/**/target/
 
