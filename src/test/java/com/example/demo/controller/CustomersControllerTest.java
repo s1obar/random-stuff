@@ -25,14 +25,6 @@ public class CustomersControllerTest {
     }
 
     @Test
-    public void getCustomerByNameHttpRequestWithStatus404() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/customers/customer/{name}", "jura"))
-                .andExpect(status().is4xxClientError())
-                .andExpect(jsonPath("$").value("We do not have that customer in our database!"))
-                .andReturn();
-    }
-
-    @Test
     public void getCustomerByNameHttpWrongRequestWithStatus404() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/customers/{name}", "jura"))
                 .andExpect(status().is4xxClientError())
