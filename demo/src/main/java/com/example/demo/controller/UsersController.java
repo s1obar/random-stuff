@@ -1,13 +1,11 @@
 package com.example.demo.controller;
 
-import com.example.demo.controller.exception.UserNotFoundException;
+import com.example.demo.controller.exception.ApiRequestException;
 import com.example.demo.domain.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,13 +43,7 @@ public class UsersController {
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    //TODO: this is just for the commit try to see if the contributions work
-    public ResponseEntity<String> getUserByName(@PathVariable String name) {
-        try {
-           return new ResponseEntity<>(userService.getUserByName(name), HttpStatus.OK);
-        } catch (UserNotFoundException exc) {
-            throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "We do not have that user in our database!", exc);
-        }
+    public String getUserByName(@PathVariable String name) throws ApiRequestException{
+           return userService.getUserByName(name);
     }
 }

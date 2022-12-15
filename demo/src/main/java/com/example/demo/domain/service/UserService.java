@@ -1,5 +1,6 @@
 package com.example.demo.domain.service;
 
+import com.example.demo.controller.exception.ApiRequestException;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -13,7 +14,7 @@ public class UserService {
         if (USERS.stream().map(String::toLowerCase).toList().contains(name.toLowerCase())){
             return name;
         }else{
-            return "";
+           throw new ApiRequestException("User does not exist.");
         }
     }
 }
