@@ -1,11 +1,11 @@
-package com.example.demo;
+package com.example.database;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiExampleApplication {
+public class DatabaseInvestigationApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ApiExampleApplication.class, args);
+		SpringApplication.run(DatabaseInvestigationApplication.class, args);
 	}
 }
