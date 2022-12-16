@@ -1,6 +1,6 @@
-package com.example.demo.domain.service;
+package com.example.exceptionhandling.domain.service;
 
-import com.example.demo.controller.exception.ApiRequestException;
+import com.example.exceptionhandling.controller.exception.ApiRequestException;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
