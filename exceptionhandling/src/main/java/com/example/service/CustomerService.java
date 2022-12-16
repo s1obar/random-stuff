@@ -8,9 +8,7 @@ import java.util.List;
 
 @Service
 public class CustomerService {
-
     private final List<String> CUSTOMERS = Arrays.asList("Jane", "Jack", "Donald");
-
     public List<String> getAll() {
         return CUSTOMERS;
     }
@@ -19,7 +17,7 @@ public class CustomerService {
         if (CUSTOMERS.stream().map(String::toLowerCase).toList().contains(name.toLowerCase())){
             return name;
         }else{
-           throw new ApiRequestException("Customer does not exist.");
+           throw new ApiRequestException("Customer does not exist in db.");
         }
     }
 }
