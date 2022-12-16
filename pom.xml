@@ -12,7 +12,7 @@
 	<artifactId>random-stuff</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Random Stuff</name>
-	<description>Investigations on different topics</description>
+	<description>Investigations on different programming topics</description>
 	<properties>
 		<java.version>17</java.version>
 		<!-- Swagger -->
