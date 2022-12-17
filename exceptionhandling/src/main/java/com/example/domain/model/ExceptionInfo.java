@@ -1,4 +1,4 @@
-package com.example.domain.model.exception;
+package com.example.domain.model;
 
 import lombok.Builder;
 import org.springframework.http.HttpStatus;

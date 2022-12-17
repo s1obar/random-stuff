@@ -1,6 +1,6 @@
 package com.example.controller.globalexception;
 
-import com.example.domain.model.exception.ExceptionInfo;
+import com.example.domain.model.ExceptionInfo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
