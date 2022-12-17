@@ -13,8 +13,8 @@ import java.util.List;
 public class UserService {
     private final List<User> USERS = Arrays.asList(
             User.builder().id(1L).name("Aurora").build(),
-            User.builder().id(1L).name("Antonija").build(),
-            User.builder().id(1L).name("Manuela").build());
+            User.builder().id(2L).name("Antonija").build(),
+            User.builder().id(3L).name("Manuela").build());
 
     public List<User> getUserByName(String name) throws UserNotFoundException{
         List<User> usersWithWantedName = USERS.stream().filter(user -> user.name().toLowerCase().equals(name)).toList();
