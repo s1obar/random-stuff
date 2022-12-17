@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.controller.globalexception.UserNotFoundException;
+import com.example.domain.model.User;
 import com.example.domain.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -8,6 +9,8 @@ import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * {@ControllerAdvice} annotation used in {@link com.example.controller.globalexception.GlobalExceptionHandler}
@@ -29,7 +32,7 @@ public class UsersController {
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    public String getUserByName(@PathVariable String name) throws UserNotFoundException {
+    public List<User> getUserByName(@PathVariable String name) throws UserNotFoundException {
            return userService.getUserByName(name);
     }
 }
