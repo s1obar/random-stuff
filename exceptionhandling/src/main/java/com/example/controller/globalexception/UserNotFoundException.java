@@ -1,11 +1,11 @@
-package com.example.controller.exception;
+package com.example.controller.globalexception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "User not found.")
-public class ApiRequestException extends RuntimeException {
-    public ApiRequestException(String message) {
+public class UserNotFoundException extends Exception {
+    public UserNotFoundException(String message) {
         super(message);
     }
 }

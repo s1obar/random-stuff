@@ -1,5 +1,6 @@
-package com.example.controller.exception;
+package com.example.controller.globalexception;
 
+import com.example.domain.model.exception.ExceptionInfo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -8,15 +9,15 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.time.ZonedDateTime;
 
 @ControllerAdvice
-public class ApiExceptionHandler {
-    @ExceptionHandler(value = {ApiRequestException.class})
-    public ResponseEntity<Object> handleApiRequestException(ApiRequestException e){
+public class GlobalExceptionHandler {
+    @ExceptionHandler(value = {UserNotFoundException.class})
+    public ResponseEntity<Object> handleUserNotFoundException(UserNotFoundException e){
         HttpStatus badRequestStatus = HttpStatus.NOT_FOUND;
-        ApiException apiException = ApiException.builder()
+        ExceptionInfo exceptionInfo = ExceptionInfo.builder()
                   .message(e.getMessage())
                   .httpStatus(HttpStatus.NOT_FOUND)
                   .timestamp(ZonedDateTime.now()).build();
-        return new ResponseEntity<>(apiException, badRequestStatus);
+        return new ResponseEntity<>(exceptionInfo, badRequestStatus);
 
     }
 }

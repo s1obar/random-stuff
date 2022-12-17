@@ -1,6 +1,7 @@
 package com.example.controller;
 
-import com.example.service.UserService;
+import com.example.controller.globalexception.UserNotFoundException;
+import com.example.domain.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -8,25 +9,16 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
+/**
+ * {@ControllerAdvice} annotation used in {@link com.example.controller.globalexception.GlobalExceptionHandler}
+ * for exception handling when trying to get user by name.
+ * **/
 @RestController
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
 public class UsersController {
 
     private final UserService userService;
-
-    @GetMapping("/all")
-    @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Fetches all users from db.",
-            notes = "Dummy data used at the moment.")
-    @ApiResponses({
-            @ApiResponse(code = 200, message = "Success"),
-    })
-    public List<String> getAllUsers(){
-        return userService.getAll();
-    }
 
     @GetMapping(value = "/user/{name}")
     @ResponseStatus(HttpStatus.OK)
@@ -37,7 +29,7 @@ public class UsersController {
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    public String getUserByName(@PathVariable String name){
+    public String getUserByName(@PathVariable String name) throws UserNotFoundException {
            return userService.getUserByName(name);
     }
 }
