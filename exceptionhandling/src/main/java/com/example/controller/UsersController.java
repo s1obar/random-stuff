@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.controller.globalexception.GlobalExceptionHandler;
 import com.example.controller.globalexception.UserNotFoundException;
 import com.example.domain.model.User;
 import com.example.domain.service.UserService;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * {@ControllerAdvice} annotation used in {@link com.example.controller.globalexception.GlobalExceptionHandler}
+ * {@ControllerAdvice} annotation used in {@link GlobalExceptionHandler}
  * for exception handling when trying to get user by name.
  * **/
 @RestController
