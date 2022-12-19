@@ -2,11 +2,17 @@
 
 ## Description
 
-Random stuff represents a lot of small projects that are going to 'speak' about things I investigated and learned about.
+Random stuff represents experimentation and investigation on different programming concepts. It is divided in multiple modules
+where each module covers different topic. Concepts are implemented in a simple way, so they can be understood even by beginner
+programmers. Whole project is not intended to be some sort of tutorial but definitely can be used as one.
 
 ## Technology
 
 * Backend: Java
 * Framework: Spring
-* Database: tbd
-* Frontend: tbd
+* Database: depending on module
+
+## Topics
+
+* Spring exception handling - using @ControllerAdvice, using @ExceptionHandler locally, using HandlerExceptionResolver
+* different database connections in Spring(Oracle, Postgres, MySQL, MongoDB)
