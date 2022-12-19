@@ -24,7 +24,7 @@ public class UsersController {
 
     private final UserService userService;
 
-    @GetMapping(value = "/user/{name}")
+    @GetMapping(value = "/{name}")
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Fetches specific user by name from db.",
             notes = "Dummy data used at the moment.")

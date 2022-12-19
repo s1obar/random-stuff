@@ -18,7 +18,7 @@ public class CustomersControllerTest {
 
     @Test
     public void getCustomerByNameHttpRequestWithStatus200() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/customers/customer/{name}", "donald"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/customers/{name}", "donald"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").value("donald"))
                 .andReturn();

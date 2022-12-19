@@ -25,7 +25,7 @@ public class CustomersController {
     private final CustomerService customerService;
 
 
-    @GetMapping(value = "/customer/{name}")
+    @GetMapping(value = "/{name}")
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Fetches specific customer by name from db.",
             notes = "Dummy data used at the moment.")
