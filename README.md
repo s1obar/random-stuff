@@ -14,5 +14,5 @@ programmers. Whole project is not intended to be some sort of tutorial but defin
 
 ## Topics
 
-* Spring exception handling - using @ControllerAdvice, using @ExceptionHandler locally, using HandlerExceptionResolver
+* Spring exception handling - using @ControllerAdvice, using @ExceptionHandler locally, using HandlerExceptionResolver interface
 * different database connections in Spring(Oracle, Postgres, MySQL, MongoDB)
