@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 /**
@@ -24,16 +25,15 @@ public class UsersController {
 
     private final UserService userService;
 
-    @GetMapping(value = "/{name}")
+    @GetMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Fetches specific user by name from db.",
-            notes = "Dummy data used at the moment.")
+    @ApiOperation(value = "Fetches specific user by id from db.")
     @ApiResponses({
             @ApiResponse(code = 200, message = "Success"),
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    public List<User> getUserByName(@PathVariable String name) throws UserNotFoundException {
-           return userService.getUserByName(name);
+    public User getUserById(@PathVariable Long id) {
+           return userService.getUserById(id);
     }
 }
