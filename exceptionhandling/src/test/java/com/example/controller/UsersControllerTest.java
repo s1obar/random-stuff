@@ -6,6 +6,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.hamcrest.Matchers.hasSize;
@@ -29,7 +30,6 @@ public class UsersControllerTest {
     @Test
     public void getUserByIdHttpWrongRequestWithStatus404() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/{id}", "5"))
-                .andExpect(status().is4xxClientError())
-                .andReturn();
+                .andExpect(status().is(404));
     }
 }
