@@ -15,8 +15,8 @@ import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 /**
- * {@ControllerAdvice} annotation used in {@link GlobalExceptionHandler}
- * for exception handling when trying to get user by name.
+ * {@RestControllerAdvice} annotation used in {@link GlobalExceptionHandler}
+ * for exception handling when trying to get user by id.
  * **/
 @RestController
 @RequestMapping("/api/v1/users")

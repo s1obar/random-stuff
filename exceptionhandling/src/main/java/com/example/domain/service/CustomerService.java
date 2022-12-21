@@ -1,26 +1,19 @@
 package com.example.domain.service;
 
-import com.example.controller.globalexception.UserNotFoundException;
 import com.example.controller.localexception.CustomerNotFoundException;
+import com.example.domain.model.Customer;
+import com.example.domain.repository.CustomerRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class CustomerService {
-    private final List<String> CUSTOMERS = Arrays.asList("Jane", "Jack", "Donald");
 
-    public String getCustomerByName(String name) throws CustomerNotFoundException {
-        boolean customersListContainsName = CUSTOMERS.stream().map(String::toLowerCase).toList().contains(name.toLowerCase());
-
-        if (customersListContainsName){
-            return name;
-        }
-
-        log.info("Invalid customer name: {}.", name);
-        throw new CustomerNotFoundException("Customer does not exist.");
+    private final CustomerRepository customerRepository;
+    public Customer getCustomerById(Long id) throws CustomerNotFoundException {
+        return customerRepository.getCustomerById(id);
     }
 }
