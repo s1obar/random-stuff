@@ -18,18 +18,17 @@ public class UsersControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void getUserByNameHttpRequestWithStatus200() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/{name}", "antonija"))
+    public void getUserByIdHttpRequestWithStatus200() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/{id}", "1"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
-                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].id").value(2L))
-                .andExpect(jsonPath("$[0].name").value("Antonija"));
+                .andExpect(jsonPath("$.id").value(1L))
+                .andExpect(jsonPath("$.name").value("Aurora"));
     }
 
     @Test
-    public void getUserByNameHttpWrongRequestWithStatus404() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/{name}", "jura"))
+    public void getUserByIdHttpWrongRequestWithStatus404() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/{id}", "5"))
                 .andExpect(status().is4xxClientError())
                 .andReturn();
     }

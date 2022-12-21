@@ -33,7 +33,7 @@ public class UsersController {
             @ApiResponse(code = 404, message = "Not found")
     })
 
-    public User getUserById(@PathVariable Long id) {
+    public User getUserById(@PathVariable Long id) throws UserNotFoundException{
            return userService.getUserById(id);
     }
 }

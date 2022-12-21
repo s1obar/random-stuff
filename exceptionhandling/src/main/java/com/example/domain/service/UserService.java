@@ -15,7 +15,7 @@ import javax.persistence.EntityNotFoundException;
 public class UserService {
     private final UserRepository userRepository;
 
-    public User getUserById(Long id) {
+    public User getUserById(Long id) throws UserNotFoundException{
         return userRepository.getUserById(id);
     }
 }

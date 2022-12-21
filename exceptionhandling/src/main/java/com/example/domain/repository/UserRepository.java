@@ -17,8 +17,7 @@ import java.util.Optional;
 public class UserRepository {
     private final UserJpaRepository userJpaRepository;
 
-    @SneakyThrows
-    public User getUserById(Long id) {
+    public User getUserById(Long id) throws UserNotFoundException {
         UserEntity userEntity = userJpaRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User does not exist in db."));
         return mapFromEntity(userEntity);
     }
