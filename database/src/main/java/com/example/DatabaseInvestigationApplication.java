@@ -2,8 +2,8 @@ package com.example;
 
 import com.example.mongo.domain.enums.Gender;
 import com.example.mongo.domain.model.Address;
-import com.example.mongo.domain.model.Student;
-import com.example.mongo.infrastructure.mongorepository.StudentRepository;
+import com.example.mongo.infrastructure.document.StudentDocument;
+import com.example.mongo.infrastructure.mongorepository.StudentMongoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,12 +20,12 @@ public class DatabaseInvestigationApplication {
     }
 
     @Bean
-    CommandLineRunner runner(StudentRepository studentRepository){
+    CommandLineRunner runner(StudentMongoRepository studentMongoRepository){
         return args -> {
-            Student student = Student.builder()
+            StudentDocument studentDocument = StudentDocument.builder()
                     .firstName("Manuela")
                     .lastName("Barisic")
-                    .email("test.test@gmail.com")
+                    .email("test.tes1@gmail.com")
                     .gender(Gender.FEMALE)
                     .address(Address.builder()
                             .country("Germany")
@@ -37,7 +37,7 @@ public class DatabaseInvestigationApplication {
                     .created(LocalDateTime.now())
                     .build();
 
-            studentRepository.insert(student);
+            studentMongoRepository.insert(studentDocument);
         };
     }
 }
