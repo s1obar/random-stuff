@@ -1,5 +1,9 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://<random-stuff>:<52UypGk7iracxksW>@spring-boot-cluster.p3ezd.mongodb.net/mygrocerylist
-      database: mygrocerylist
+      authentication-database: admin
+      username: admin
+      password: password
+      database: test
+      port: 27017
+      host: localhost
