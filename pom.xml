@@ -23,7 +23,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<!-- Swagger -->
-		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+		<springfox-swagger2.version>3.0.0</springfox-swagger2.version>
 	</properties>
 	<dependencies>
 		<dependency>

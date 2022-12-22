@@ -2,6 +2,7 @@ package com.example;
 
 import com.example.mongo.domain.enums.Gender;
 import com.example.mongo.domain.model.Address;
+import com.example.mongo.domain.model.Student;
 import com.example.mongo.infrastructure.document.StudentDocument;
 import com.example.mongo.infrastructure.mongorepository.StudentMongoRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +28,7 @@ public class DatabaseInvestigationApplication {
     CommandLineRunner runner(StudentMongoRepository studentMongoRepository){
         return args -> {
             StudentDocument document = buildStudentDocument();
-            Optional<StudentDocument> optionalDocFromDb = studentMongoRepository.findStudentDocumentByEmail(document.email());
+            Optional<Student> optionalDocFromDb = studentMongoRepository.findStudentDocumentByEmail(document.email());
 
             if(optionalDocFromDb.isPresent()){
                 log.warn("*****CANNOT INSERT DOCUMENT. THERE IS ONE IN DB WITH THE SAME EMAIL FIELD(indexed).");
