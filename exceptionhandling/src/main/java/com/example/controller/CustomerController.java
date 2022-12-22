@@ -22,7 +22,7 @@ import java.time.ZonedDateTime;
 @RestController
 @RequestMapping(path = "/api/v1/customers")
 @RequiredArgsConstructor
-public class CustomersController {
+public class CustomerController {
 
     private final CustomerService customerService;
 

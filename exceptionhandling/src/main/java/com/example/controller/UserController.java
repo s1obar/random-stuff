@@ -11,9 +11,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.EntityNotFoundException;
-import java.util.List;
-
 /**
  * {@RestControllerAdvice} annotation used in {@link GlobalExceptionHandler}
  * for exception handling when trying to get user by id.
@@ -21,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
-public class UsersController {
+public class UserController {
 
     private final UserService userService;
 

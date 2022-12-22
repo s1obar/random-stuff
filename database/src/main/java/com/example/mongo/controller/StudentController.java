@@ -1,7 +1,6 @@
 package com.example.mongo.controller;
 
 import com.example.mongo.domain.model.Student;
-import com.example.mongo.infrastructure.document.StudentDocument;
 import com.example.mongo.domain.service.StudentService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -15,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/students")
 @RequiredArgsConstructor
-public class StudentsController {
+public class StudentController {
 
     private final StudentService userService;
 
