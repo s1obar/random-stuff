@@ -22,15 +22,34 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.example.mongo.controller"))
                 .paths(regex("/api/v1/.*"))
                 .build()
-                .groupName("v1")
-                .apiInfo(apiInfo());
+                .groupName("mongo v1")
+                .apiInfo(apiMongoInfo());
     }
 
-    private ApiInfo apiInfo(){
+    @Bean
+    public Docket apiPostgresDb() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.example.postgres.controller"))
+                .paths(regex("/api/v1/.*"))
+                .build()
+                .groupName("postgres v1")
+                .apiInfo(apiPostgresInfo());
+    }
+
+    private ApiInfo apiMongoInfo(){
         return new ApiInfoBuilder()
                 .title("Mongodb Demo")
                 .version("1.0")
                 .description("Different CRUD services with MongoDB")
+                .build();
+    }
+
+    private ApiInfo apiPostgresInfo(){
+        return new ApiInfoBuilder()
+                .title("Postgres Demo")
+                .version("1.0")
+                .description("Different CRUD services with Postgres")
                 .build();
     }
 }
