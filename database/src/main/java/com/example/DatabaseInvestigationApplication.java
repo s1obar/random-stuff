@@ -24,34 +24,34 @@ public class DatabaseInvestigationApplication {
         SpringApplication.run(DatabaseInvestigationApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner runner(StudentMongoRepository studentMongoRepository){
-        return args -> {
-            StudentDocument document = buildStudentDocument();
-            Optional<Student> optionalDocFromDb = studentMongoRepository.findStudentDocumentByEmail(document.email());
-
-            if(optionalDocFromDb.isPresent()){
-                log.warn("*****CANNOT INSERT DOCUMENT. THERE IS ONE IN DB WITH THE SAME EMAIL FIELD(indexed).");
-            }else{
-                studentMongoRepository.insert(document);
-            }
-        };
-    }
-
-    private StudentDocument buildStudentDocument(){
-        return StudentDocument.builder()
-                .firstName("Manuela")
-                .lastName("Barisic")
-                .email("test.tes1@gmail.com")
-                .gender(Gender.FEMALE)
-                .address(Address.builder()
-                        .country("Germany")
-                        .city("Split")
-                        .postCode("21000")
-                        .build())
-                .favoriteSubjects(List.of("Finances"))
-                .totalSpentInBooks(BigDecimal.valueOf(15L))
-                .created(LocalDateTime.now())
-                .build();
-    }
+//    @Bean
+//    CommandLineRunner runner(StudentMongoRepository studentMongoRepository){
+//        return args -> {
+//            StudentDocument document = buildStudentDocument();
+//            Optional<Student> optionalDocFromDb = studentMongoRepository.findStudentDocumentByEmail(document.email());
+//
+//            if(optionalDocFromDb.isPresent()){
+//                log.warn("*****CANNOT INSERT DOCUMENT. THERE IS ONE IN DB WITH THE SAME EMAIL FIELD(indexed).");
+//            }else{
+//                studentMongoRepository.insert(document);
+//            }
+//        };
+//    }
+//
+//    private StudentDocument buildStudentDocument(){
+//        return StudentDocument.builder()
+//                .firstName("Manuela")
+//                .lastName("Barisic")
+//                .email("test.tes1@gmail.com")
+//                .gender(Gender.FEMALE)
+//                .address(Address.builder()
+//                        .country("Germany")
+//                        .city("Split")
+//                        .postCode("21000")
+//                        .build())
+//                .favoriteSubjects(List.of("Finances"))
+//                .totalSpentInBooks(BigDecimal.valueOf(15L))
+//                .created(LocalDateTime.now())
+//                .build();
+//    }
 }
