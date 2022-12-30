@@ -1,8 +1,10 @@
 spring:
   profiles:
-    active: mongodb-local
+    active:
   data:
     mongodb:
-#      authentication-database: admin
+      username: admin
+      password: password
+      database: test
       host: localhost
       auto-index-creation: true
