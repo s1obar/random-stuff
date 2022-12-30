@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      username: admin
+      password: password
+      database: test
