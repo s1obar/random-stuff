@@ -1,6 +1,6 @@
 spring:
   data:
     mongodb:
-      username: admin
-      password: password
-      database: test
+      username: dev-user
+      password: pass
+      database: dev

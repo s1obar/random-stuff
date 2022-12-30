@@ -1,10 +1,8 @@
 spring:
+  profiles:
+    active: mongodb-local
   data:
     mongodb:
-      authentication-database: admin
-      username: admin
-      password: password
-      database: test
-      port: 27017
+#      authentication-database: admin
       host: localhost
       auto-index-creation: true
