@@ -1,4 +1,5 @@
 package com.example.creational.factorymethod;
 
-public abstract class Transport {
+public interface Transport {
+    void load();
 }
