@@ -17,7 +17,11 @@
 	<modules>
 		<module>exceptionhandling</module>
 		<module>database</module>
-	</modules>
+        <module>multithreading</module>
+		<module>springbatch</module>
+		<module>springintegration</module>
+        <module>designpatterns</module>
+    </modules>
 
 	<description>Investigations on different programming topics</description>
 	<properties>
