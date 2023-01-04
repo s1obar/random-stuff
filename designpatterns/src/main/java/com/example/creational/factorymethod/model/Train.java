@@ -9,6 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 public class Train implements Transport {
     @Override
     public void load(){
-        log.info("Loading train.");
+        log.info("************ TRAIN CREATED. LOADING. ***************");
     }
 }

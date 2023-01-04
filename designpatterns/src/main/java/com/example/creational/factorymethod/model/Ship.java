@@ -8,6 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Ship implements Transport {
     public void load(){
-        log.info("Loading ship.");
+        log.info("************ SHIP CREATED. LOADING. ***************");
     }
 }

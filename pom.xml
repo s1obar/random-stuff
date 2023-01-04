@@ -17,9 +17,6 @@
 	<modules>
 		<module>exceptionhandling</module>
 		<module>database</module>
-        <module>multithreading</module>
-		<module>springbatch</module>
-		<module>springintegration</module>
         <module>designpatterns</module>
     </modules>
 
