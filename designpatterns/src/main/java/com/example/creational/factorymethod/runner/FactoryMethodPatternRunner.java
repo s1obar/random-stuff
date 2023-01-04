@@ -6,7 +6,7 @@ import com.example.creational.factorymethod.factory.TransportFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FactoryMethodPatterRunner {
+public class FactoryMethodPatternRunner {
     public void runFactoryMethodDesignPattern(){
         TransportFactory trainFactory = TrainFactory.builder().build();
         trainFactory.deliverPackage();
