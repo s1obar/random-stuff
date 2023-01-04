@@ -13,10 +13,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class DesignPatternsInvestigationApplication {
     public static void main(String[] args) {
-        TransportFactory trainFactory = TrainFactory.builder().build();
-        trainFactory.deliverPackage();
+        SpringApplication sa = new SpringApplication(DesignPatternsInvestigationApplication.class);
+        sa.run(args);
 
-        TransportFactory shipFactory = ShipFactory.builder().build();
-        shipFactory.deliverPackage();
+//        TransportFactory trainFactory = TrainFactory.builder().build();
+//        trainFactory.deliverPackage();
+//
+//        TransportFactory shipFactory = ShipFactory.builder().build();
+//        shipFactory.deliverPackage();
     }
 }
