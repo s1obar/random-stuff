@@ -1,9 +1,17 @@
 package com.example.creational.abstractfactory.runner;
 
+import com.example.creational.factorymethod.factory.ShipFactory;
+import com.example.creational.factorymethod.factory.TrainFactory;
+import com.example.creational.factorymethod.factory.TransportFactory;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AbstractFactoryPatternRunner {
     public void runAbstractFactoryDesignPattern(){
+        TransportFactory trainFactory = TrainFactory.builder().build();
+        trainFactory.deliverPackage();
+
+        TransportFactory shipFactory = ShipFactory.builder().build();
+        shipFactory.deliverPackage();
     }
 }
