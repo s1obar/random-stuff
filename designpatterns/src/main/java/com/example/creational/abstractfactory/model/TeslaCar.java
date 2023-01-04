@@ -8,9 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 @Builder
 @Slf4j
 @NoArgsConstructor
-public class ManCar implements Car {
+public class TeslaCar implements Car {
     @Override
     public void load(){
-        log.info("************ MAN CAR CREATED. LOADING. ***************");
+        log.info("************ TESLA CAR CREATED. LOADING. ***************");
     }
 }

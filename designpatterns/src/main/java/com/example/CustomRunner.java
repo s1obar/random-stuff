@@ -17,8 +17,8 @@ public class CustomRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args){
         log.info("Job started");
-        factoryMethodPatternRunner.runFactoryMethodDesignPattern();
-//        abstractFactoryPatternRunner.runAbstractFactoryDesignPattern();
+//        factoryMethodPatternRunner.runFactoryMethodDesignPattern();
+        abstractFactoryPatternRunner.runAbstractFactoryDesignPattern();
         log.info("Job ended");
         log.info("Stopping the application.");
 
