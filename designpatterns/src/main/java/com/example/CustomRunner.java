@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.creational.abstractfactory.runner.AbstractFactoryPatternRunner;
+import com.example.creational.builder.runner.BuilderDesignPatternRunner;
 import com.example.creational.factorymethod.runner.FactoryMethodPatternRunner;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,11 +15,13 @@ import org.springframework.stereotype.Component;
 public class CustomRunner implements ApplicationRunner {
     private final FactoryMethodPatternRunner factoryMethodPatternRunner;
     private final AbstractFactoryPatternRunner abstractFactoryPatternRunner;
+    private final BuilderDesignPatternRunner builderDesignPatternRunner;
     @Override
     public void run(ApplicationArguments args){
         log.info("Job started");
 //        factoryMethodPatternRunner.runFactoryMethodDesignPattern();
-        abstractFactoryPatternRunner.runAbstractFactoryDesignPattern();
+//        abstractFactoryPatternRunner.runAbstractFactoryDesignPattern();
+        builderDesignPatternRunner.runBuilderDesignPattern();
         log.info("Job ended");
         log.info("Stopping the application.");
 
