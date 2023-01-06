@@ -1,9 +1,7 @@
 package com.example.creational.abstractfactory.factory;
 
-import com.example.creational.abstractfactory.Truck;
 import com.example.creational.abstractfactory.Car;
-import com.example.creational.abstractfactory.model.BmwCar;
-import com.example.creational.factorymethod.Transport;
+import com.example.creational.abstractfactory.Truck;
 
 public abstract class VehiclesFactory {
     public abstract Truck createTruck();

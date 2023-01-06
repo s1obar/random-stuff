@@ -13,9 +13,9 @@ public class BmwFactory extends VehiclesFactory {
 
     @Override
     public Truck createTruck(){
-        return new BmwTruck();
+        return new BmwTruck(100, 10000);
     }
     @Override
-    public Car createCar(){return new BmwCar();
+    public Car createCar(){return new BmwCar(200, 1000);
     }
 }

@@ -13,10 +13,10 @@ public class TeslaFactory extends VehiclesFactory {
 
     @Override
     public Truck createTruck(){
-        return new TeslaTruck();
+        return new TeslaTruck(100, true);
     }
     @Override
     public Car createCar(){
-        return new TeslaCar();
+        return new TeslaCar(200, false);
     }
 }

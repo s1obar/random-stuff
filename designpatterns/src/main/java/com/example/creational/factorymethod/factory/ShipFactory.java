@@ -8,6 +8,6 @@ import lombok.Builder;
 public class ShipFactory extends TransportFactory {
     @Override
     public Transport createTransport(){
-        return Ship.builder().build();
+        return Ship.builder().maxSpeed(100).lengthInSpeed(100).build();
     }
 }
