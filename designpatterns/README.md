@@ -8,6 +8,7 @@ This module covers different design patterns and their implementation in some si
 * Factory Method
 * Abstract Factory
 * Builder
+* Prototype
 
 ### Structural:
 ### Behavioral:
