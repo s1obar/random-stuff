@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SingletonDesignPatternRunner {
-    public void runSingleThreadedSingletonDesignPatternExample(){
+    public void runSingleThreadedSingletonDesignPattern(){
         SingleThreadedSingleton singleton = SingleThreadedSingleton.getInstance("COO-COO");
         SingleThreadedSingleton anotherSingleton = SingleThreadedSingleton.getInstance("BUU-BUU");
 
@@ -14,5 +14,11 @@ public class SingletonDesignPatternRunner {
                 "RESULT: " +
                 "{}" +
                 "{}", singleton.value, anotherSingleton.value);
+    }
+
+    public void runMultiThreadedSingletonDesignPattern(){
+    }
+
+    public void runThreadSafeSingletonDesignPattern(){
     }
 }
