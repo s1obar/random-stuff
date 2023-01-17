@@ -1,8 +1,8 @@
 package com.example.controller;
 
+import com.example.controller.localexception.CustomerNotFoundException;
 import com.example.domain.model.Customer;
 import com.example.domain.model.ExceptionInfo;
-import com.example.controller.localexception.CustomerNotFoundException;
 import com.example.domain.service.CustomerService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

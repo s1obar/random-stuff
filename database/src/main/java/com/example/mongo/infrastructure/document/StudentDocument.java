@@ -2,7 +2,6 @@ package com.example.mongo.infrastructure.document;
 
 import com.example.mongo.domain.enums.Gender;
 import com.example.mongo.domain.model.Address;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;

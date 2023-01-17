@@ -5,11 +5,7 @@ import com.example.domain.model.User;
 import com.example.infrastructure.jpa.entity.UserEntity;
 import com.example.infrastructure.jpa.repository.UserJpaRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.stereotype.Repository;
-
-import javax.persistence.EntityNotFoundException;
-import java.util.Optional;
 
 
 @Repository
