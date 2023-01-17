@@ -5,10 +5,12 @@ This module covers different design patterns and their implementation in some si
 ## Patterns covered so far
 
 ### Creational:
+
 * Factory Method
 * Abstract Factory
 * Builder
 * Prototype
+* Singleton
 
 ### Structural:
 ### Behavioral:
