@@ -10,7 +10,11 @@ This module covers different design patterns and their implementation in some si
 * Abstract Factory
 * Builder
 * Prototype
-* Singleton
+* Singleton:
+  * Single threaded version
+  * multithreaded version will not work correctly if we do not do it with double-checked 
+  locking(DCL - using keywords volatile and synchronized), 
+  because multiple threads can get different instances of singleton simultaneously
 
 ### Structural:
 ### Behavioral:

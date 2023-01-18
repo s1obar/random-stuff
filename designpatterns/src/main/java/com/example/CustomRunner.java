@@ -27,7 +27,8 @@ public class CustomRunner implements ApplicationRunner {
 //        abstractFactoryPatternRunner.runAbstractFactoryDesignPattern();
 //        builderDesignPatternRunner.runBuilderDesignPattern();
 //        prototypeDesignPatternRunner.runPrototypeDesignPattern();
-        singletonDesignPatternRunner.runSingleThreadedSingletonDesignPattern();
+//        singletonDesignPatternRunner.runSingleThreadedSingletonDesignPattern();
+        singletonDesignPatternRunner.runThreadSafeSingletonDesignPattern();
         log.info("Job ended");
         log.info("Stopping the application.");
 
