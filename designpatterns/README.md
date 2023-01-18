@@ -17,6 +17,11 @@ This module covers different design patterns and their implementation in some si
   because multiple threads can get different instances of singleton simultaneously
 
 ### Structural:
+
+* Adapter - it makes possible for 2 incompatible objects to collaborate
+
+
+
 ### Behavioral:
 
 
