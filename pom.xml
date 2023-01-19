@@ -18,6 +18,7 @@
 		<module>exceptionhandling</module>
 		<module>database</module>
         <module>designpatterns</module>
+        <module>aws</module>
     </modules>
 
 	<description>Investigations on different programming topics</description>
