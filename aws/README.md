@@ -12,6 +12,7 @@ This module covers different AWS services and their implementation using java wh
 ## How to run?
 
 1) Install localstack
-2) Run specific script to create service that you want to test using localstack
-
-3) steps to be continued
+2) Run ```localstack start``` from terminal
+3) Run ***launch_localstack_container.sh*** which is located in ***localstack*** folder to create services that 
+you want to test using localstack
+5) steps to be continued
