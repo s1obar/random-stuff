@@ -3,3 +3,5 @@ localstack:
   region: eu-central-1
   access-key: foo
   secret-key: bar
+  queue:
+    name: test_sqs.fifo
