@@ -1,0 +1,5 @@
+localstack:
+  endpoint: http:/localhost:4566/
+  region: eu-central-1
+  access-key: foo
+  secret-key: bar
