@@ -18,12 +18,13 @@ public class SqsPublisher {
     private final AmazonSQSAsync localstackSqs;
 
     public void publish(String message){
-        final String messageId = UUID.randomUUID().toString();
+        final String messageDeduplicationId = UUID.randomUUID().toString();
+        String messageGroupId = "TEST_MESSAGE";
 
         final SendMessageRequest request =new SendMessageRequest()
                 .withQueueUrl(localstackSqs.getQueueUrl(queueName).getQueueUrl())
-                .withMessageDeduplicationId(messageId)
-                .withMessageGroupId(message)
+                .withMessageDeduplicationId(messageDeduplicationId)
+                .withMessageGroupId(messageGroupId)
                 .withMessageBody(message);
 
         log.info("Publishing message {} to queue {}.", message, queueName);
