@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active:
+    active: mongodb-local
   data:
     mongodb:
       username: admin
