@@ -15,6 +15,7 @@ This module covers different AWS services and their implementation using java wh
 2) Run ```localstack start``` from terminal
 3) Run ***launch_localstack_container.sh*** which is located in ***localstack*** folder to create services that 
 you want to test using localstack
-4) run the app and open localstack:8080/ in your browser
-5) you can publish message to localstack using swagger
+4) run the app and open localhost:8080/ in your browser
+5) you can publish any message to localstack using swagger
 6) to check if the message was published to test queue you can run ***receive-message-from-sqs.sh***
+7) to destroy localstack container you need to run ***destroy_localstack_container.sh***
