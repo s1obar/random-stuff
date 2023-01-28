@@ -5,6 +5,7 @@ import com.example.creational.builder.runner.BuilderDesignPatternRunner;
 import com.example.creational.factorymethod.runner.FactoryMethodPatternRunner;
 import com.example.creational.prototype.runner.PrototypeDesignPatternRunner;
 import com.example.creational.singleton.runner.SingletonDesignPatternRunner;
+import com.example.structural.adapter.objectimpl.ObjectAdapterRunner;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
@@ -20,6 +21,7 @@ public class CustomRunner implements ApplicationRunner {
     private final BuilderDesignPatternRunner builderDesignPatternRunner;
     private final PrototypeDesignPatternRunner prototypeDesignPatternRunner;
     private final SingletonDesignPatternRunner singletonDesignPatternRunner;
+    private final ObjectAdapterRunner objectAdapterRunner;
     @Override
     public void run(ApplicationArguments args){
         log.info("Job started");
@@ -28,7 +30,8 @@ public class CustomRunner implements ApplicationRunner {
 //        builderDesignPatternRunner.runBuilderDesignPattern();
 //        prototypeDesignPatternRunner.runPrototypeDesignPattern();
 //        singletonDesignPatternRunner.runSingleThreadedSingletonDesignPattern();
-        singletonDesignPatternRunner.runThreadSafeSingletonDesignPattern();
+//        singletonDesignPatternRunner.runThreadSafeSingletonDesignPattern();
+        objectAdapterRunner.runObjectAdapterDesignPatter();
         log.info("Job ended");
         log.info("Stopping the application.");
 
