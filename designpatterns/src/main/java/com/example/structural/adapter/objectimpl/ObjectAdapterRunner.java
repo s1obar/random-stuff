@@ -1,22 +1,24 @@
 package com.example.structural.adapter.objectimpl;
 
+import com.example.structural.adapter.SocketAdapter;
 import com.example.structural.adapter.model.Voltage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Slf4j
+@Component
 public class ObjectAdapterRunner {
-    private final SocketObjectAdapterImpl socketObjectAdapter;
-
     public void runObjectAdapterDesignPatter(){
-        Voltage voltage3 = socketObjectAdapter.get3Volts();
-        Voltage voltage12 = socketObjectAdapter.get12Volts();
-        Voltage voltage120 = socketObjectAdapter.get120Volts();
+        SocketAdapter socketAdapter = new SocketObjectAdapterImpl();
+        int voltage3 = socketAdapter.get3Volts().getVolts();
+        int voltage12 = socketAdapter.get12Volts().getVolts();
+        int voltage120 = socketAdapter.get120Volts().getVolts();
 
 
-        log.info("3 volts: {}", voltage3);
-        log.info("12 volts: {}", voltage12);
-        log.info("120 volts: {}", voltage120);
+        log.info("Lowest voltage: {}V", voltage3);
+        log.info("Middle voltage: {}V", voltage12);
+        log.info("Max voltage: {}V", voltage120);
     }
 }

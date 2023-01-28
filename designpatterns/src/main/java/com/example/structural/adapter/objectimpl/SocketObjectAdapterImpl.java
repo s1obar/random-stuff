@@ -3,7 +3,9 @@ package com.example.structural.adapter.objectimpl;
 import com.example.structural.adapter.SocketAdapter;
 import com.example.structural.adapter.model.Socket;
 import com.example.structural.adapter.model.Voltage;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SocketObjectAdapterImpl implements SocketAdapter {
     private final Socket socket = new Socket();
 
