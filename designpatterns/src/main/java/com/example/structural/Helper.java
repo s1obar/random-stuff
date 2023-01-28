@@ -1,7 +1,6 @@
 package com.example.structural;
 
 import com.example.structural.adapter.SocketAdapter;
-import com.example.structural.adapter.objectimpl.SocketObjectAdapterImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
