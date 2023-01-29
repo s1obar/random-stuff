@@ -10,7 +10,7 @@ programmers. Whole project is not intended to be some sort of tutorial but defin
 
 * Backend: Java
 * Framework: Spring
-* Database: depending on module
+* Database: oracle, mongo, mysql
 
 ## Topics
 
@@ -18,3 +18,4 @@ programmers. Whole project is not intended to be some sort of tutorial but defin
 * different database connections in Spring(Oracle, Postgres, MySQL, MongoDB)
 * design patterns examples
 * aws examples implementation
+* Java multithreading topics
