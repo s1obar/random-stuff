@@ -19,6 +19,8 @@ This module covers different design patterns and their implementation in some si
 ### Structural:
 
 * Adapter - it makes possible for 2 incompatible objects to collaborate
+* Bridge - divides a large class or a set of closely related classes into 2 separate hierarchies
+  which can be developed independently(abstraction and implementation)
 
 
 
