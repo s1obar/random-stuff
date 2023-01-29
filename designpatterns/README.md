@@ -39,3 +39,5 @@ This module covers different design patterns and their implementation in some si
 
 Usually these jobs just log some basic info. In order to see how specific pattern is constructed 
 you need to check the code of course. 
+
+Short design pattern descriptions were taken from ***Geekific*** design pattern tutorials on Youtube.
