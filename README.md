@@ -10,7 +10,7 @@ programmers. Whole project is not intended to be some sort of tutorial but defin
 
 * Backend: Java
 * Framework: Spring
-* Database: oracle, mongo, mysql
+* Database: oracle, mongo, mysql, postgres (depending on module)
 
 ## Topics
 
