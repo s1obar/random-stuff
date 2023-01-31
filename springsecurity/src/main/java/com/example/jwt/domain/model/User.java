@@ -1,7 +1,6 @@
-package com.example.jwt.model;
+package com.example.jwt.domain.model;
 
 import com.example.jwt.enums.Role;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,17 +16,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-@Table(name = "_user")
 public class User implements UserDetails {
-    @Id
-    @GeneratedValue
     private Integer id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Override

@@ -1,9 +1,9 @@
 package com.example.jwt.controller;
 
-import com.example.jwt.auth.AuthenticationService;
-import com.example.jwt.model.AuthenticationResponse;
-import com.example.jwt.model.RegisterRequest;
-import com.example.jwt.model.AuthenticationRequest;
+import com.example.jwt.domain.service.auth.AuthenticationService;
+import com.example.jwt.domain.model.AuthenticationResponse;
+import com.example.jwt.domain.model.RegisterRequest;
+import com.example.jwt.domain.model.AuthenticationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,12 +1,12 @@
-package com.example.jwt.auth;
+package com.example.jwt.domain.service.auth;
 
+import com.example.jwt.domain.model.User;
+import com.example.jwt.domain.repository.UsersRepository;
 import com.example.jwt.enums.Role;
-import com.example.jwt.model.AuthenticationResponse;
-import com.example.jwt.model.RegisterRequest;
-import com.example.jwt.repository.UserRepository;
-import com.example.jwt.model.AuthenticationRequest;
-import com.example.jwt.model.User;
-import com.example.jwt.service.JwtService;
+import com.example.jwt.domain.model.AuthenticationResponse;
+import com.example.jwt.domain.model.RegisterRequest;
+import com.example.jwt.domain.model.AuthenticationRequest;
+import com.example.jwt.domain.service.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-    private final UserRepository repository;
+    private final UsersRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authManager;
@@ -30,7 +30,7 @@ public class AuthenticationService {
                 .role(Role.USER)
                 .build();
 
-        repository.save(user);
+        userRepository.save(user);
         var jwt = jwtService.generateToken(user);
 
         return AuthenticationResponse.builder().token(jwt).build();
@@ -44,7 +44,7 @@ public class AuthenticationService {
                 )
         );
 
-        var user = repository.findByEmail(authenticationRequest.getEMail()).orElseThrow();
+        var user = userRepository.findByEmail(authenticationRequest.getEMail()).orElseThrow();
         var jwt = jwtService.generateToken(user);
 
         return AuthenticationResponse.builder().token(jwt).build();

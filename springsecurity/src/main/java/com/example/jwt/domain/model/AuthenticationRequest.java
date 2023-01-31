@@ -1,4 +1,4 @@
-package com.example.jwt.model;
+package com.example.jwt.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterRequest {
-    private String firstName;
-    private String lastName;
+public class AuthenticationRequest {
     private String eMail;
     private String password;
 }
