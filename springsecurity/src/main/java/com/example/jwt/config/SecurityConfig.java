@@ -1,7 +1,6 @@
-package com.example.config;
+package com.example.jwt.config;
 
-import com.example.service.JwtAuthFilter;
-import jakarta.servlet.Filter;
+import com.example.jwt.service.JwtAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +24,7 @@ public class SecurityConfig {
             .csrf()
             .disable()
             .authorizeHttpRequests()
-            .requestMatchers("")
+            .requestMatchers("/api/v1/auth/**")
             .permitAll()
             .anyRequest()
             .authenticated()

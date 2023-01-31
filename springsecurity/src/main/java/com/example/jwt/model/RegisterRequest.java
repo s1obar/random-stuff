@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.jwt.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package com.example.model;
+package com.example.jwt.model;
 
-import com.example.enums.Role;
+import com.example.jwt.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,13 +19,13 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "_user")
-public class UserEntity implements UserDetails {
+public class User implements UserDetails {
     @Id
     @GeneratedValue
     private Integer id;
     private String firstName;
     private String lastName;
-    private String eMail;
+    private String email;
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -37,7 +37,7 @@ public class UserEntity implements UserDetails {
 
     @Override
     public String getUsername() {
-        return eMail;
+        return email;
     }
 
     @Override

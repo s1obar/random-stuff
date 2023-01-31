@@ -1,4 +1,4 @@
-package com.example.enums;
+package com.example.jwt.enums;
 
 public enum Role {
     USER,

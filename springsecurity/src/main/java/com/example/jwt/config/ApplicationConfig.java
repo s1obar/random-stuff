@@ -1,6 +1,6 @@
-package com.example.config;
+package com.example.jwt.config;
 
-import com.example.repository.UserRepository;
+import com.example.jwt.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
