@@ -1,7 +1,7 @@
 package com.example.jwt.domain.service.auth;
 
 import com.example.jwt.domain.model.User;
-import com.example.jwt.domain.repository.UsersRepository;
+import com.example.jwt.domain.repository.UserRepository;
 import com.example.jwt.enums.Role;
 import com.example.jwt.domain.model.AuthenticationResponse;
 import com.example.jwt.domain.model.RegisterRequest;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-    private final UsersRepository userRepository;
+    private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authManager;
@@ -44,7 +44,7 @@ public class AuthenticationService {
                 )
         );
 
-        var user = userRepository.findByEmail(authenticationRequest.getEMail()).orElseThrow();
+        var user = userRepository.findByEmail(authenticationRequest.getEMail());
         var jwt = jwtService.generateToken(user);
 
         return AuthenticationResponse.builder().token(jwt).build();
