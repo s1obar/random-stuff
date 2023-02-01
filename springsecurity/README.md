@@ -2,8 +2,9 @@
 
 ## Description
 
-This module contains implementations of a different Spring security concepts. At the moment only JWT is implemented
-using Spring 3.
+This module contains implementations of a different Spring security concepts. What is currently implemented:
+* JWT
+
 
 ## Technology
 
