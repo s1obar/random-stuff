@@ -8,14 +8,15 @@ programmers. Whole project is not intended to be some sort of tutorial but defin
 
 ## Technology
 
-* Backend: Java
+* Backend: Java 17
 * Framework: Spring
 * Database: oracle, mongo, mysql, postgres (depending on module)
 
 ## Topics
 
-* Spring exception handling - using @ControllerAdvice, using @ExceptionHandler locally, using HandlerExceptionResolver interface
-* different database connections in Spring(Oracle, Postgres, MySQL, MongoDB)
-* design patterns examples
-* aws examples implementation
+* Spring exception handling
+* Different database connections in Spring
+* Design patterns examples
+* AWS examples implementation
 * Java multithreading topics
+* Spring security concepts
